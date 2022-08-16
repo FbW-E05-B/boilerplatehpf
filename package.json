@@ -2,10 +2,15 @@
   "name": "parcel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "sass sassy-css.scss styles.css --watch",
+    "start": "parcel index.html",
+    "build": "rm -rf dist && parcel build index.html --public-url ./"
   },
   "author": "DCIhpf",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
 }
